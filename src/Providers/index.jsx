@@ -1,9 +1,15 @@
 import { UserGitHubProvider } from "./UserGItHub";
+import { UserRepoProvider } from "./UserRepo";
+import { UserStarredProvider } from "./UserStarred";
 
 const Providers = ({children}) => {
     return(
         <UserGitHubProvider>
-            {children}
+            <UserRepoProvider>
+                <UserStarredProvider>
+                    {children}
+                </UserStarredProvider>
+            </UserRepoProvider>            
         </UserGitHubProvider>
     )
 }

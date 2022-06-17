@@ -9,7 +9,7 @@ export const HeaderS = styled.header`
 `
 
 export const InputS = styled.input`
-    width: 90%;
+    width: 100%;
     padding: 5px 10px;
     margin-left: 10px;
     border: none;
@@ -17,7 +17,6 @@ export const InputS = styled.input`
 `
 
 export const ButtonS = styled.button`
-    width: 10%;
     padding: 5px 10px;
     margin-right: 10px;
     border: none;
