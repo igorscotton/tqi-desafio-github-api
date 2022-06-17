@@ -1,13 +1,17 @@
 import './App.css';
 import Header from './Components/Header';
 import Profile from './Components/Profile';
-import ShowCase from './Components/ShowCase'
+import ShowCase from './Components/ShowCase';
+import {useUserGitHub} from './Providers/UserGItHub'
+
 function App() {
+  const {user} = useUserGitHub();
+
   return (
     <div className="App">
       <Header></Header>
-      <Profile></Profile>
-      <ShowCase></ShowCase>      
+      {user && <Profile></Profile>}
+      {user && <ShowCase></ShowCase>}   
     </div>
   );
 }
